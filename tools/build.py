@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
 USER = "rewantth"
 GH = f"https://github.com/{USER}/"
+SITE = f"https://{USER}.github.io/"
 HIDE_REPOS = {"notes", "rewantth", "rewantth.github.io"}   # public repos not shown in the stats
 
 # ============================== CONTENT (edit here) ==============================
@@ -579,20 +580,19 @@ def build_readme(stats_block: str) -> str:
     tools = "\n".join(f"| `{k}` | {v} |" for k, v in TOOLBOX)
     blog = "\n".join(f'| {p["date"]} | **[{p["title"]}](blog/{p["slug"]}.md)** | {p["desc"]} |' for p in POSTS)
     about_md = f"{ABOUT}\n\n{METHOD}\n\n| right now | |\n|---|---|\n{now}\n\n| toolbox | |\n|---|---|\n{tools}"
+    home = (f'<a name="home"></a>\n<a href="{SITE}"><img src="assets/home.svg" alt="Kali terminal running neofetch. Click to open the interactive terminal." width="100%"></a>\n\n'
+            f'<div align="center"><b><a href="{SITE}">▶ open the interactive terminal</a></b> &nbsp;·&nbsp; type <code>help</code> there to run commands</div>\n')
+    full_text = (f"### about\n\n{about_md}\n\n### projects\n\n**Code:** {links}\n\n" + "\n".join(details)
+                 + f"\n### focus\n\n| | |\n|---|---|\n{focus}\n\n### writeups\n\n| date | writeup | summary |\n|---|---|---|\n{blog}\n\n### stats\n\n{stats_block}")
     out = [
         f'<div align="center">\n\n{nav}\n\n</div>\n',
-        img("home", "Kali terminal running neofetch with the Kali dragon and the profile picture in a circle"),
+        home,
         img("about", "Kali terminal showing the about page"),
-        text_details("about, as text", about_md),
         img("projects", "Kali terminal listing six security projects as cards"),
-        f"**Code:** {links}\n",
-        *details,
         img("focus", "Kali terminal showing what the projects are about"),
-        text_details("focus, as text", f"| | |\n|---|---|\n{focus}"),
         img("blog", "Kali terminal listing two writeups"),
-        f"| date | writeup | summary |\n|---|---|---|\n{blog}\n",
         img("stats", "Kali terminal showing GitHub stats: profile picture, repositories, activity and languages"),
-        text_details("stats, as text", stats_block),
+        text_details("text version: links, project details, writeups, stats", full_text),
     ]
     return "\n".join(out)
 

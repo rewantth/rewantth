@@ -5,13 +5,29 @@
 </div>
 
 <a name="home"></a>
-<img src="assets/home.svg" alt="Kali terminal running neofetch with the Kali dragon and the profile picture in a circle" width="100%">
+<a href="https://rewantth.github.io/"><img src="assets/home.svg" alt="Kali terminal running neofetch. Click to open the interactive terminal." width="100%"></a>
+
+<div align="center"><b><a href="https://rewantth.github.io/">▶ open the interactive terminal</a></b> &nbsp;·&nbsp; type <code>help</code> there to run commands</div>
 
 <a name="about"></a>
 <img src="assets/about.svg" alt="Kali terminal showing the about page" width="100%">
 
+<a name="projects"></a>
+<img src="assets/projects.svg" alt="Kali terminal listing six security projects as cards" width="100%">
+
+<a name="focus"></a>
+<img src="assets/focus.svg" alt="Kali terminal showing what the projects are about" width="100%">
+
+<a name="blog"></a>
+<img src="assets/blog.svg" alt="Kali terminal listing two writeups" width="100%">
+
+<a name="stats"></a>
+<img src="assets/stats.svg" alt="Kali terminal showing GitHub stats: profile picture, repositories, activity and languages" width="100%">
+
 <details>
-<summary>about, as text</summary>
+<summary>text version: links, project details, writeups, stats</summary>
+
+### about
 
 I am a cybersecurity student who learns by building. Every project here is something I can run, break and explain, and each one is on the defender's side: spotting attacks in data, triaging alerts, segmenting networks and protecting information with encryption.
 
@@ -30,10 +46,7 @@ Everything uses synthetic or self-owned data, and I only test on systems I am au
 | `security` | `MITRE ATT&CK` `AES-256-GCM` `PBKDF2` `CSP` `WebCrypto` `VLANs` `DMZ` `AAA` |
 | `tools` | `Kali Linux` `Cisco Packet Tracer` `GitHub Actions` `pytest` |
 
-</details>
-
-<a name="projects"></a>
-<img src="assets/projects.svg" alt="Kali terminal listing six security projects as cards" width="100%">
+### projects
 
 **Code:** [sentinel-travel](https://github.com/rewantth/SentinelTravel) · [sentinelops](https://github.com/rewantth/sentinelops-soc-console) · [phishguard-x](https://github.com/rewantth/phishguard-x) · [securewave-net](https://github.com/rewantth/Enterprise-Secure-Network-Packet-Tracer) · [cdsa-study-tracker](https://github.com/rewantth/cdsa-study-tracker) · inbox-dashboard <sub>(private)</sub>
 
@@ -151,11 +164,7 @@ Security: read-only OAuth scope · AES-256-GCM with PBKDF2-SHA-256 (1,000,000 ro
 
 </details>
 
-<a name="focus"></a>
-<img src="assets/focus.svg" alt="Kali terminal showing what the projects are about" width="100%">
-
-<details>
-<summary>focus, as text</summary>
+### focus
 
 | | |
 |---|---|
@@ -164,21 +173,14 @@ Security: read-only OAuth scope · AES-256-GCM with PBKDF2-SHA-256 (1,000,000 ro
 | `explainable` | every alert, score and finding shows the evidence behind it |
 | `method` | synthetic or self-owned data only, and authorized targets only |
 
-</details>
-
-<a name="blog"></a>
-<img src="assets/blog.svg" alt="Kali terminal listing two writeups" width="100%">
+### writeups
 
 | date | writeup | summary |
 |---|---|---|
 | 2026-11-20 | **[A dashboard that can't leak its own data](blog/inbox-dashboard-security.md)** | The threat model first, then the controls it produced. |
 | 2026-11-19 | **[Keep the key, not the passphrase](blog/keep-the-key.md)** | Remember a user without ever storing their secret. |
 
-<a name="stats"></a>
-<img src="assets/stats.svg" alt="Kali terminal showing GitHub stats: profile picture, repositories, activity and languages" width="100%">
-
-<details>
-<summary>stats, as text</summary>
+### stats
 
 <!-- stats:start -->
 ```console
