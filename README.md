@@ -1,27 +1,21 @@
 <div align="center">
 
-<img src="assets/terminal.svg" alt="Kali Linux terminal: PROJECTS. A scan lists six security projects: sentinel-travel, sentinelops, phishguard-x, securewave-net, cdsa-study-tracker and inbox-dashboard." width="100%">
-
-**[Open the interactive terminal →](https://rewantth.github.io/)**
-<br><sub>a simulated Kali desktop with projects, writeups and live GitHub stats</sub>
+<a href="#home"><img src="assets/nav-home.svg" alt="home" height="38"></a> <a href="#projects"><img src="assets/nav-projects.svg" alt="projects" height="38"></a> <a href="#focus"><img src="assets/nav-focus.svg" alt="focus" height="38"></a> <a href="#blog"><img src="assets/nav-blog.svg" alt="blog" height="38"></a> <a href="#stats"><img src="assets/nav-stats.svg" alt="stats" height="38"></a> 
 
 </div>
 
-```console
-┌──(kali㉿kali)-[~/projects]
-└─$ ls -1
-sentinel-travel/  sentinelops/  phishguard-x/  securewave-network/  cdsa-study-tracker/  inbox-dashboard/
-```
+<a name="home"></a>
+<img src="assets/home.svg" alt="Kali terminal running neofetch with the Kali dragon and the profile picture in a circle" width="100%">
 
-Defensive security projects: detection, alert triage, secure network design and data protection. Everything runs on synthetic or self-owned data.
+<a name="projects"></a>
+<img src="assets/projects.svg" alt="Kali terminal listing six security projects" width="100%">
 
----
+**Code:** [sentinel-travel](https://github.com/rewantth/SentinelTravel) · [sentinelops](https://github.com/rewantth/sentinelops-soc-console) · [phishguard-x](https://github.com/rewantth/phishguard-x) · [securewave-net](https://github.com/rewantth/Enterprise-Secure-Network-Packet-Tracer) · [cdsa-study-tracker](https://github.com/rewantth/cdsa-study-tracker) · inbox-dashboard <sub>(private)</sub>
 
-## [`sentinel-travel/`](https://github.com/rewantth/SentinelTravel)
+<details>
+<summary><b>sentinel-travel/</b> &nbsp;·&nbsp; identity threat detection and impossible-travel analytics, shown as a live SOC console.</summary>
 
-> Identity threat detection and impossible-travel analytics, presented as a live SOC console.
-
-**Stack:** FastAPI · React · SQLite · WebSockets · Leaflet · Recharts
+**Stack:** FastAPI · React · SQLite · WebSockets · Leaflet · Recharts &nbsp;|&nbsp; **Status:** portfolio project, synthetic data only &nbsp;|&nbsp; [code](https://github.com/rewantth/SentinelTravel)
 
 ```console
 ┌──(kali㉿kali)-[~/projects/sentinel-travel]
@@ -35,13 +29,12 @@ Defensive security projects: detection, alert triage, secure network design and 
 
 Identity attacks look like normal logins until timing, location, device and MFA are correlated. This turns authentication events into explainable alerts and shows the reasoning to the analyst.
 
----
+</details>
 
-## [`sentinelops/`](https://github.com/rewantth/sentinelops-soc-console)
+<details>
+<summary><b>sentinelops/</b> &nbsp;·&nbsp; SOC alert triage and investigation console with MITRE ATT&CK mapping and case tracking.</summary>
 
-> SOC alert triage and investigation console with MITRE ATT&CK mapping and case tracking.
-
-**Stack:** Flask · SQLAlchemy · SQLite · Chart.js · JavaScript
+**Stack:** Flask · SQLAlchemy · SQLite · Chart.js · JavaScript &nbsp;|&nbsp; **Status:** portfolio project, safe simulated alerts &nbsp;|&nbsp; [code](https://github.com/rewantth/sentinelops-soc-console)
 
 ```console
 ┌──(kali㉿kali)-[~/projects/sentinelops]
@@ -55,84 +48,93 @@ Identity attacks look like normal logins until timing, location, device and MFA 
 
 Defensive and blue-team only: no offensive functionality, malware or harmful payloads.
 
----
+</details>
 
-## [`phishguard-x/`](https://github.com/rewantth/phishguard-x)
+<details>
+<summary><b>phishguard-x/</b> &nbsp;·&nbsp; explainable phishing detection and email threat analysis.</summary>
 
-> Explainable phishing detection and email threat analysis.
-
-**Stack:** Python · Flask · pytest
+**Stack:** Python · Flask · pytest &nbsp;|&nbsp; **Status:** portfolio project &nbsp;|&nbsp; [code](https://github.com/rewantth/phishguard-x)
 
 ```console
 ┌──(kali㉿kali)-[~/projects/phishguard-x]
 └─$ tree --modules
 .
-├── email-checks    urgency, coercion, credential bait, scam-like phrasing
-├── sender-checks   impersonation, free-provider misuse, brand mismatch
-├── url-checks      shorteners, IP links, risky TLDs, redirects, obfuscation, displayed-vs-actual links
-└── scoring         weighted category scores, severity, confidence and a verdict
+├── email-checks urgency, coercion, credential bait, scam-like phrasing
+├── sender-checksimpersonation, free-provider misuse, brand mismatch
+├── url-checks   shorteners, IP links, risky TLDs, redirects, obfuscation, displayed-vs-actual links
+└── scoring      weighted category scores, severity, confidence and a verdict
 ```
 
-The engine is rule-based on purpose, so every finding is explainable: each one carries a rule id, evidence, severity and remediation. It includes sample phishing and legitimate messages and unit tests for scoring.
+The engine is rule-based on purpose, so every finding is explainable: each carries a rule id, evidence, severity and remediation. It includes sample phishing and legitimate messages and unit tests for scoring.
 
----
+</details>
 
-## [`securewave-network/`](https://github.com/rewantth/Enterprise-Secure-Network-Packet-Tracer) · [project page](https://rewantth.github.io/Enterprise-Secure-Network-Packet-Tracer/)
+<details>
+<summary><b>securewave-net/</b> &nbsp;·&nbsp; an enterprise branch network with VLAN segmentation, a DMZ and routed security zones, built in Cisco Packet Tracer.</summary>
 
-> An enterprise branch network with VLAN segmentation, a DMZ and routed security zones, built in Cisco Packet Tracer.
-
-**Stack:** Cisco Packet Tracer · VLANs · SVIs · DHCP · DNS · AAA
+**Stack:** Cisco Packet Tracer · VLANs · SVIs · DHCP · DNS · AAA &nbsp;|&nbsp; **Status:** core network complete. ACLs, port security and OSPF planned &nbsp;|&nbsp; [code](https://github.com/rewantth/Enterprise-Secure-Network-Packet-Tracer) · [project page](https://rewantth.github.io/Enterprise-Secure-Network-Packet-Tracer/)
 
 ```console
-┌──(kali㉿kali)-[~/projects/securewave-network]
+┌──(kali㉿kali)-[~/projects/securewave-net]
 └─$ tree --modules
 .
-├── segmentation   8 VLANs, a guest VLAN, and a black-hole VLAN 999 for unused ports
-├── routing        layer 3 inter-VLAN routing on a core switch, edge router link, trunks to 5 access switches
-├── services       DHCP for every user VLAN, a DMZ with DNS, web and AAA servers
-└── evidence       device configs, IP and VLAN plan, test checklists and a security policy matrix
+├── segmentation 8 VLANs, a guest VLAN, and a black-hole VLAN 999 for unused ports
+├── routing      layer 3 inter-VLAN routing on a core switch, edge router link, trunks to 5 access switches
+├── services     DHCP for every user VLAN, a DMZ with DNS, web and AAA servers
+└── evidence     device configs, IP and VLAN plan, test checklists and a security policy matrix
 ```
 
-**Next:** ACL-based access control between VLANs, port security, and OSPF between the edge router and core.
+Next: ACL-based access control between VLANs, port security, and OSPF between the edge router and core.
 
----
+</details>
 
-## [`cdsa-study-tracker/`](https://github.com/rewantth/cdsa-study-tracker) · [live page](https://rewantth.github.io/cdsa-study-tracker/)
+<details>
+<summary><b>cdsa-study-tracker/</b> &nbsp;·&nbsp; a free, offline study tracker for the HTB SOC Analyst path and the CDSA exam. no accounts, no backend, no network requests.</summary>
 
-> A free, offline study tracker for the HTB SOC Analyst path and the CDSA exam. No accounts, no backend, no network requests.
+**Stack:** single-file HTML · JavaScript · CSS &nbsp;|&nbsp; **Status:** live, progress never leaves the browser &nbsp;|&nbsp; [code](https://github.com/rewantth/cdsa-study-tracker) · [live page](https://rewantth.github.io/cdsa-study-tracker/)
 
-**Stack:** single-file HTML · JavaScript · CSS
-
-- 341 checkboxes across 25 modules, with a daily plan that re-plans from what is left
-- Spaced-repetition review queue, a focus timer, and streaks that ignore rest days
-- Per-module guides, hints, notes, a problem roadmap and an exam readiness tab
-- Progress stays in the browser, with download and restore backups
+```console
+┌──(kali㉿kali)-[~/projects/cdsa-study-tracker]
+└─$ tree --modules
+.
+├── plan         341 checkboxes across 25 modules, with a daily plan that re-plans from what is left
+├── review       spaced-repetition queue, focus timer, streaks that ignore rest days
+├── guides       per-module guides, hints, notes, a problem roadmap and an exam readiness tab
+└── privacy      progress stays in the browser, with download and restore backups
+```
 
 Privacy by design: with no analytics and no requests to any server, nothing about the user can leak.
 
----
+</details>
 
-## `inbox-dashboard/` &nbsp;<sub>private source</sub>
+<details>
+<summary><b>inbox-dashboard/</b> &nbsp;·&nbsp; a security-first dashboard that turns the emails in a mailbox into a live, encrypted web page.</summary>
 
-> A security-first dashboard that turns the emails in a mailbox into a live, encrypted web page.
-
-**Stack:** Python 3.12 · Gmail API (OAuth) · WebCrypto · vanilla JavaScript · GitHub Actions
-
-| Threat | Control |
-|---|---|
-| Mailbox exposure | Read-only OAuth scope. The token lives only as an encrypted CI secret, visible to one build step. |
-| Someone downloads the data file | AES-256-GCM, PBKDF2-SHA-256 with 1,000,000 rounds, a fixed per-project salt and a random IV for every file. |
-| Script injection in the page | A Content Security Policy generated from the page's own script hash. Injected scripts and inline handlers are refused. |
-| Stolen browser storage | A non-extractable `CryptoKey` is kept instead of the passphrase, and Lock deletes it. |
-| Hijacked dependency or action | Every Action pinned to a commit and every package pinned to a version. |
-| Over-powered CI | `permissions: {}` by default, and a deploy key that can write to exactly one repository. |
-
-85 automated checks across four suites cover the classifier, alerts, security controls and cache.
-
----
+**Stack:** Python 3.12 · Gmail API · WebCrypto · vanilla JS · GitHub Actions &nbsp;|&nbsp; **Status:** running, source private &nbsp;|&nbsp; private source
 
 ```console
-┌──(kali㉿kali)-[~/projects]
-└─$ echo "more to come"
-more to come
+┌──(kali㉿kali)-[~/projects/inbox-dashboard]
+└─$ tree --modules
+.
+├── mail-reader  read-only Gmail OAuth, incremental download with a cache
+├── classifier   rule engine: sender, subject and body patterns decide the category and stage
+├── vault        AES-256-GCM encryption, decrypted only in the browser
+└── pipeline     scheduled build in a private repo, one-way publish to a public page
 ```
+
+Security: read-only OAuth scope · AES-256-GCM with PBKDF2-SHA-256 (1,000,000 rounds) · strict Content Security Policy from the page's own script hash · a non-extractable CryptoKey instead of the passphrase · every Action pinned to a commit · a deploy key that writes to one repository. 85 automated checks.
+
+</details>
+
+<a name="focus"></a>
+<img src="assets/focus.svg" alt="Kali terminal showing what the projects are about" width="100%">
+
+<a name="blog"></a>
+<img src="assets/blog.svg" alt="Kali terminal listing two writeups" width="100%">
+
+**Read:** [A dashboard that can't leak its own data](blog/inbox-dashboard-security.md) · [Keep the key, not the passphrase](blog/keep-the-key.md)
+
+<a name="stats"></a>
+<img src="assets/stats.svg" alt="Kali terminal showing GitHub stats: profile picture, repositories, activity and languages" width="100%">
+
+<sub>The stats picture is rebuilt every day by a small GitHub Action from public data only. Private repositories are never shown.</sub>

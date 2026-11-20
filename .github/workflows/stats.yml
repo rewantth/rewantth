@@ -1,0 +1,43 @@
+name: Refresh stats
+
+# Rebuilds assets/stats.svg once a day from PUBLIC GitHub data only. Private repositories are
+# never requested. The job can write to this repository and nothing else.
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch: {}
+
+permissions: {}
+
+concurrency:
+  group: stats
+  cancel-in-progress: true
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      # Actions are pinned to exact commits, so a hijacked tag upstream cannot run new code here.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262   # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065   # v5
+        with:
+          python-version: "3.12"
+      - name: Build the stats picture
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/build.py --stats-only
+      - name: Commit the new picture if it changed
+        run: |
+          if git diff --quiet -- assets/stats.svg; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "rewantth"
+          git config user.email "124269295+rewantth@users.noreply.github.com"
+          git add assets/stats.svg
+          git commit -m "Refresh stats"
+          git push
