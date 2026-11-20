@@ -1,94 +1,133 @@
 <div align="center">
 
-<img src="assets/terminal.svg" alt="Kali Linux terminal: PROJECTS. A scan of the inbox-dashboard project lists five modules: mail-reader, classifier, vault, pipeline and alerts." width="100%">
+<img src="assets/terminal.svg" alt="Kali Linux terminal: PROJECTS. A scan lists six security projects: sentinel-travel, sentinelops, phishguard-x, securewave-net, cdsa-study-tracker and inbox-dashboard." width="100%">
+
+**[Open the interactive terminal →](https://rewantth.github.io/)**
+<br><sub>a simulated Kali desktop with projects, writeups and live GitHub stats</sub>
 
 </div>
 
 ```console
 ┌──(kali㉿kali)-[~/projects]
 └─$ ls -1
-inbox-dashboard/
+sentinel-travel/  sentinelops/  phishguard-x/  securewave-network/  cdsa-study-tracker/  inbox-dashboard/
 ```
+
+Defensive security projects: detection, alert triage, secure network design and data protection. Everything runs on synthetic or self-owned data.
 
 ---
 
-## `inbox-dashboard/`
+## [`sentinel-travel/`](https://github.com/rewantth/SentinelTravel)
 
-> A security-first dashboard that turns the emails in a mailbox into a live, encrypted web page. It reads mail with read-only access, sorts it by sender and wording, and publishes a static page that only the owner's passphrase can open.
+> Identity threat detection and impossible-travel analytics, presented as a live SOC console.
 
-| | |
-|---|---|
-| **Stack** | Python 3.12 · Gmail API (OAuth 2.0) · WebCrypto · vanilla JavaScript · GitHub Actions |
-| **Status** | Running, refreshing every 30 minutes |
-| **Source** | Private repository. Only the finished page and its encrypted data are public |
-| **Tests** | 85 automated checks across four suites |
+**Stack:** FastAPI · React · SQLite · WebSockets · Leaflet · Recharts
 
 ```console
-┌──(kali㉿kali)-[~/projects/inbox-dashboard]
+┌──(kali㉿kali)-[~/projects/sentinel-travel]
 └─$ tree --modules
 .
-├── mail-reader    read-only Gmail OAuth, incremental download with a cache
-├── classifier     rule engine: sender, subject and body patterns decide the category and stage
-├── vault          AES-256-GCM encryption, decrypted only in the browser
-├── pipeline       scheduled build, private source, one-way publish to a public page
-└── alerts         optional phone alerts that carry counts only, never names
+├── detection    travel speed (Haversine), per-user baselines, risk and confidence scoring, MITRE ATT&CK mapping
+├── signals      impossible travel, VPN/proxy and TOR use, MFA failures, bad IP reputation, credential stuffing
+├── console      live alert stream, maps, analyst notes, audit log, kill-switch actions, SIEM-style exports
+└── data         15 synthetic attack scenarios, no real users or logs
 ```
 
-### Architecture
+Identity attacks look like normal logins until timing, location, device and MFA are correlated. This turns authentication events into explainable alerts and shows the reasoning to the analyst.
 
-```text
- Gmail (read-only)
-        │
-        ▼
- ┌──────────────────────────┐        ┌──────────────────────────────┐
- │  PRIVATE repository      │        │  PUBLIC repository           │
- │  mail-reader             │ deploy │  index.html   (page + CSP)   │
- │  classifier              │──key──▶│  data.enc.json (ciphertext)  │
- │  vault  (encrypts)       │ 1 repo │  nothing else                │
- │  alerts ──▶ ntfy (counts)│        └──────────────┬───────────────┘
- └──────────────────────────┘                       │
-                                                    ▼
-                                      browser: passphrase ──▶ WebCrypto ──▶ dashboard
+---
+
+## [`sentinelops/`](https://github.com/rewantth/sentinelops-soc-console)
+
+> SOC alert triage and investigation console with MITRE ATT&CK mapping and case tracking.
+
+**Stack:** Flask · SQLAlchemy · SQLite · Chart.js · JavaScript
+
+```console
+┌──(kali㉿kali)-[~/projects/sentinelops]
+└─$ tree --modules
+.
+├── ingest       simulated alert generation, JSON ingestion into SQLite
+├── triage       severity and status filters, MITRE ATT&CK classification, IP enrichment with a safe no-key fallback
+├── cases        new to closed workflow, timeline with second-level timestamps, analyst notes
+└── reporting    live simulated feed, charts, investigation export as JSON, MTTD and MTTR metrics
 ```
 
-### Security design
+Defensive and blue-team only: no offensive functionality, malware or harmful payloads.
+
+---
+
+## [`phishguard-x/`](https://github.com/rewantth/phishguard-x)
+
+> Explainable phishing detection and email threat analysis.
+
+**Stack:** Python · Flask · pytest
+
+```console
+┌──(kali㉿kali)-[~/projects/phishguard-x]
+└─$ tree --modules
+.
+├── email-checks    urgency, coercion, credential bait, scam-like phrasing
+├── sender-checks   impersonation, free-provider misuse, brand mismatch
+├── url-checks      shorteners, IP links, risky TLDs, redirects, obfuscation, displayed-vs-actual links
+└── scoring         weighted category scores, severity, confidence and a verdict
+```
+
+The engine is rule-based on purpose, so every finding is explainable: each one carries a rule id, evidence, severity and remediation. It includes sample phishing and legitimate messages and unit tests for scoring.
+
+---
+
+## [`securewave-network/`](https://github.com/rewantth/Enterprise-Secure-Network-Packet-Tracer) · [project page](https://rewantth.github.io/Enterprise-Secure-Network-Packet-Tracer/)
+
+> An enterprise branch network with VLAN segmentation, a DMZ and routed security zones, built in Cisco Packet Tracer.
+
+**Stack:** Cisco Packet Tracer · VLANs · SVIs · DHCP · DNS · AAA
+
+```console
+┌──(kali㉿kali)-[~/projects/securewave-network]
+└─$ tree --modules
+.
+├── segmentation   8 VLANs, a guest VLAN, and a black-hole VLAN 999 for unused ports
+├── routing        layer 3 inter-VLAN routing on a core switch, edge router link, trunks to 5 access switches
+├── services       DHCP for every user VLAN, a DMZ with DNS, web and AAA servers
+└── evidence       device configs, IP and VLAN plan, test checklists and a security policy matrix
+```
+
+**Next:** ACL-based access control between VLANs, port security, and OSPF between the edge router and core.
+
+---
+
+## [`cdsa-study-tracker/`](https://github.com/rewantth/cdsa-study-tracker) · [live page](https://rewantth.github.io/cdsa-study-tracker/)
+
+> A free, offline study tracker for the HTB SOC Analyst path and the CDSA exam. No accounts, no backend, no network requests.
+
+**Stack:** single-file HTML · JavaScript · CSS
+
+- 341 checkboxes across 25 modules, with a daily plan that re-plans from what is left
+- Spaced-repetition review queue, a focus timer, and streaks that ignore rest days
+- Per-module guides, hints, notes, a problem roadmap and an exam readiness tab
+- Progress stays in the browser, with download and restore backups
+
+Privacy by design: with no analytics and no requests to any server, nothing about the user can leak.
+
+---
+
+## `inbox-dashboard/` &nbsp;<sub>private source</sub>
+
+> A security-first dashboard that turns the emails in a mailbox into a live, encrypted web page.
+
+**Stack:** Python 3.12 · Gmail API (OAuth) · WebCrypto · vanilla JavaScript · GitHub Actions
 
 | Threat | Control |
 |---|---|
-| Mailbox exposure | Read-only OAuth scope (`gmail.readonly`). The token lives only as an encrypted CI secret and is visible to one build step. |
-| Someone downloads the data file | AES-256-GCM, key from PBKDF2-SHA-256 with 1,000,000 rounds, a fixed per-project salt and a fresh random IV for every file. A tampered file fails authentication. |
-| Script injection in the page | A strict Content Security Policy is generated at build time from the page's own script hash. Injected scripts and inline handlers are refused, and the page may only contact its own origin. Tested by actually injecting both. |
-| Stolen browser storage | "Keep me unlocked" stores a non-extractable `CryptoKey`, not the passphrase. Nothing readable is kept, and Lock deletes it. |
-| Hijacked dependency or action | Every GitHub Action is pinned to an exact commit and every Python package to an exact version. Dependabot proposes upgrades for review. |
-| Over-powered CI | The workflow starts with `permissions: {}`. The publishing key is an SSH deploy key that can write to one repository and nothing else. Host keys come from GitHub's published list. |
-| Source code exposure | Private source repository. The public side receives only built files, as a single commit force-pushed each run, so history never accumulates. |
-| Leaks through logs and alerts | Logs of public pipelines print nothing about the data. Phone alerts say things like "1 new reply", never a name or subject. |
-| Clickjacking and referrer leaks | The page refuses to run inside a frame and sends no referrer. |
+| Mailbox exposure | Read-only OAuth scope. The token lives only as an encrypted CI secret, visible to one build step. |
+| Someone downloads the data file | AES-256-GCM, PBKDF2-SHA-256 with 1,000,000 rounds, a fixed per-project salt and a random IV for every file. |
+| Script injection in the page | A Content Security Policy generated from the page's own script hash. Injected scripts and inline handlers are refused. |
+| Stolen browser storage | A non-extractable `CryptoKey` is kept instead of the passphrase, and Lock deletes it. |
+| Hijacked dependency or action | Every Action pinned to a commit and every package pinned to a version. |
+| Over-powered CI | `permissions: {}` by default, and a deploy key that can write to exactly one repository. |
 
-### Engineering notes
-
-- **Why a fixed salt?** The browser can then remember one key between visits instead of the passphrase. The salt isn't secret. It is unique per project, and every file still gets its own random IV.
-- **Why private source and a public page?** The free tier of the hosting platform serves pages only from public repositories. Splitting build from publish keeps the code private while the page stays reachable.
-- **Why an incremental cache?** Private pipelines have a monthly minutes budget. Reusing already-downloaded mail keeps each run well under a minute.
-- **Alert diffing without a database:** each run downloads the previous published ciphertext, decrypts it with the same passphrase, and compares. Only emails newer than three days can trigger an alert, so a rule change can't flood the phone.
-
-### Tests
-
-```console
-┌──(kali㉿kali)-[~/projects/inbox-dashboard]
-└─$ python tests/test_classify.py && python tests/test_alerts.py && python tests/test_security.py && python tests/test_cache.py
-32 of 32 checks passed
-20 of 20 checks passed
-25 of 25 checks passed
-8 of 8 checks passed
-```
-
-| Suite | What it proves |
-|---|---|
-| `test_classify` | Categories, stages and sources are detected correctly, and newsletters and look-alikes are ignored |
-| `test_alerts` | Alerts fire only for new events, carry no names, and reach a local stand-in server correctly |
-| `test_security` | The policy is applied and blocks injection, the key can't be extracted, tampered ciphertext is rejected, and all dependencies are pinned |
-| `test_cache` | Only missing mail is downloaded, and a damaged cache is never fatal |
+85 automated checks across four suites cover the classifier, alerts, security controls and cache.
 
 ---
 

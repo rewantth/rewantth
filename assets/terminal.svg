@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" role="img" aria-labelledby="ttl dsc">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="690" viewBox="0 0 900 690" role="img" aria-labelledby="ttl dsc">
   <title id="ttl">kali@kali: ~/projects</title>
-  <desc id="dsc">A Kali Linux terminal. The Kali dragon sits beside the word PROJECTS. A scan lists the modules of one project, an encrypted dashboard built security-first: mail reader, classifier, vault, pipeline and alerts.</desc>
+  <desc id="dsc">A Kali Linux terminal. The Kali dragon sits beside the word PROJECTS. A scan lists six security projects: impossible-travel detection, a SOC triage console, phishing analysis, a segmented enterprise network, a study tracker and an encrypted dashboard.</desc>
   <defs>
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".30"/></pattern>
     <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#367BF0" stop-opacity=".55"/><stop offset="1" stop-color="#367BF0" stop-opacity="0"/></radialGradient>
     <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00ff9c" stop-opacity="0"/><stop offset=".55" stop-color="#00ff9c" stop-opacity=".10"/><stop offset="1" stop-color="#00ff9c" stop-opacity="0"/></linearGradient>
-    <clipPath id="win"><rect x="8" y="8" width="884" height="624" rx="12"/></clipPath>
+    <clipPath id="win"><rect x="8" y="8" width="884" height="674" rx="12"/></clipPath>
   </defs>
   <style>
     text { font-family: "JetBrains Mono","Fira Code","Cascadia Code",Consolas,Menlo,"DejaVu Sans Mono",monospace; font-size: 14px; white-space: pre; }
@@ -25,7 +25,7 @@
     @media (prefers-reduced-motion: reduce) { .l { animation-duration:0s; animation-delay:0s !important; } .cur,.sweep,.ga,.gb,.pulse { animation:none; } .sweep { display:none; } }
   </style>
 
-  <rect x="8" y="8" width="884" height="624" rx="12" fill="#070b10" stroke="#1d2b3f" stroke-width="1.5"/>
+  <rect x="8" y="8" width="884" height="674" rx="12" fill="#070b10" stroke="#1d2b3f" stroke-width="1.5"/>
   <g clip-path="url(#win)">
     <path d="M8 8h884v32H8z" fill="#0d141d"/>
     <circle cx="34" cy="24" r="6.5" fill="#ff5f56"/><circle cx="56" cy="24" r="6.5" fill="#ffbd2e"/><circle cx="78" cy="24" r="6.5" fill="#27c93f"/>
@@ -41,31 +41,32 @@
       <text x="312" y="166" class="k">// security-first builds</text>
     </g>
 
-    <g class="l" style="animation-delay:0.58s"><text x="310" y="204"><tspan class="k bold">target  </tspan><tspan class="w">inbox-dashboard</tspan></text></g>
-    <g class="l" style="animation-delay:0.86s"><text x="310" y="226"><tspan class="k bold">status  </tspan><tspan class="g">running</tspan></text></g>
-    <g class="l" style="animation-delay:1.14s"><text x="310" y="248"><tspan class="k bold">source  </tspan><tspan class="w">private repository</tspan></text></g>
-    <g class="l" style="animation-delay:1.42s"><text x="310" y="270"><tspan class="k bold">tests   </tspan><tspan class="w">85 passing</tspan></text></g>
+    <g class="l" style="animation-delay:0.58s"><text x="310" y="204"><tspan class="k bold">projects </tspan><tspan class="w">6</tspan></text></g>
+    <g class="l" style="animation-delay:0.86s"><text x="310" y="226"><tspan class="k bold">public   </tspan><tspan class="g">5 repositories</tspan></text></g>
+    <g class="l" style="animation-delay:1.14s"><text x="310" y="248"><tspan class="k bold">private  </tspan><tspan class="w">1, source hidden</tspan></text></g>
+    <g class="l" style="animation-delay:1.42s"><text x="310" y="270"><tspan class="k bold">focus    </tspan><tspan class="w">detection · triage · secure design</tspan></text></g>
 
     <g class="l" style="animation-delay:1.7s">
       <text x="36" y="312"><tspan class="k">┌──(</tspan><tspan class="c bold">kali㉿kali</tspan><tspan class="k">)-[</tspan><tspan class="w bold">~/projects</tspan><tspan class="k">]</tspan></text>
-      <text x="36" y="334"><tspan class="k">└─</tspan><tspan class="c bold">$ </tspan><tspan class="w">sudo ./scan.sh --target inbox-dashboard</tspan></text>
+      <text x="36" y="334"><tspan class="k">└─</tspan><tspan class="c bold">$ </tspan><tspan class="w">sudo ./scan.sh --all</tspan></text>
     </g>
-    <g class="l" style="animation-delay:2.26s"><text x="36" y="366" class="d">[*] enumerating modules ...</text></g>
-    <g class="l" style="animation-delay:2.54s"><text x="36" y="388"><tspan class="g">[██████████████████████] 100%</tspan><tspan class="d">   5 modules found</tspan></text></g>
-    <g class="l" style="animation-delay:3.1s"><text x="36" y="418"><tspan class="k bold">MODULE</tspan><tspan class="k bold" x="236">STATE</tspan><tspan class="k bold" x="326">STACK</tspan></text></g>
-    <g class="l" style="animation-delay:3.38s"><text x="36" y="438" class="w">mail-reader</text><text x="236" y="438" class="g">open</text><text x="326" y="438" class="d">Python · Gmail API (read-only OAuth)</text></g>
-    <g class="l" style="animation-delay:3.66s"><text x="36" y="460" class="w">classifier</text><text x="236" y="460" class="g">open</text><text x="326" y="460" class="d">rule engine · 32 automated tests</text></g>
-    <g class="l" style="animation-delay:3.94s"><text x="36" y="482" class="w">vault</text><text x="236" y="482" class="g">open</text><text x="326" y="482" class="d">WebCrypto · AES-256-GCM · CSP</text></g>
-    <g class="l" style="animation-delay:4.22s"><text x="36" y="504" class="w">pipeline</text><text x="236" y="504" class="g">open</text><text x="326" y="504" class="d">GitHub Actions · pinned to commit SHAs</text></g>
-    <g class="l" style="animation-delay:4.5s"><text x="36" y="526" class="w">alerts</text><text x="236" y="526" class="g">open</text><text x="326" y="526" class="d">ntfy · counts only, no names</text></g>
-    <g class="l" style="animation-delay:5.06s"><text x="36" y="568"><tspan class="g">[+]</tspan><tspan class="w"> 1 project · 5 modules · all checks passed</tspan></text></g>
-    <g class="l" style="animation-delay:5.34s">
-      <text x="36" y="598"><tspan class="k">┌──(</tspan><tspan class="c bold">kali㉿kali</tspan><tspan class="k">)-[</tspan><tspan class="w bold">~/projects</tspan><tspan class="k">]</tspan></text>
-      <text x="36" y="618"><tspan class="k">└─</tspan><tspan class="c bold">$ </tspan></text>
-      <rect class="cur" x="76" y="605" width="9" height="16" fill="#00ff9c"/>
+    <g class="l" style="animation-delay:2.26s"><text x="36" y="366" class="d">[*] enumerating projects ...</text></g>
+    <g class="l" style="animation-delay:2.54s"><text x="36" y="388"><tspan class="g">[██████████████████████] 100%</tspan><tspan class="d">   6 projects found</tspan></text></g>
+    <g class="l" style="animation-delay:3.1s"><text x="36" y="418"><tspan class="k bold">PROJECT</tspan><tspan class="k bold" x="236">STATE</tspan><tspan class="k bold" x="326">STACK</tspan></text></g>
+    <g class="l" style="animation-delay:3.38s"><text x="36" y="438" class="w">sentinel-travel</text><text x="236" y="438" class="g">open</text><text x="326" y="438" class="d">FastAPI · React · impossible-travel detection</text></g>
+    <g class="l" style="animation-delay:3.66s"><text x="36" y="460" class="w">sentinelops</text><text x="236" y="460" class="g">open</text><text x="326" y="460" class="d">Flask · SOC triage · MITRE ATT&amp;CK mapping</text></g>
+    <g class="l" style="animation-delay:3.94s"><text x="36" y="482" class="w">phishguard-x</text><text x="236" y="482" class="g">open</text><text x="326" y="482" class="d">Python · explainable phishing analysis</text></g>
+    <g class="l" style="animation-delay:4.22s"><text x="36" y="504" class="w">securewave-net</text><text x="236" y="504" class="g">open</text><text x="326" y="504" class="d">Packet Tracer · VLANs · DMZ · AAA</text></g>
+    <g class="l" style="animation-delay:4.5s"><text x="36" y="526" class="w">cdsa-study-tracker</text><text x="236" y="526" class="g">open</text><text x="326" y="526" class="d">offline study tracker · no network calls</text></g>
+    <g class="l" style="animation-delay:4.78s"><text x="36" y="548" class="w">inbox-dashboard</text><text x="236" y="548" class="g">open</text><text x="326" y="548" class="d">AES-256-GCM · strict CSP · private source</text></g>
+    <g class="l" style="animation-delay:5.34s"><text x="36" y="590"><tspan class="g">[+]</tspan><tspan class="w"> 6 projects · scan complete</tspan></text></g>
+    <g class="l" style="animation-delay:5.62s">
+      <text x="36" y="628"><tspan class="k">┌──(</tspan><tspan class="c bold">kali㉿kali</tspan><tspan class="k">)-[</tspan><tspan class="w bold">~/projects</tspan><tspan class="k">]</tspan></text>
+      <text x="36" y="650"><tspan class="k">└─</tspan><tspan class="c bold">$ </tspan></text>
+      <rect class="cur" x="76" y="637" width="9" height="16" fill="#00ff9c"/>
     </g>
 
-    <rect x="8" y="8" width="884" height="624" fill="url(#scan)"/>
+    <rect x="8" y="8" width="884" height="674" fill="url(#scan)"/>
     <rect class="sweep" x="8" y="8" width="884" height="140" fill="url(#bar)"/>
   </g>
 </svg>
