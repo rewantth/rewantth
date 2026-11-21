@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
 USER = "rewantth"
 GH = f"https://github.com/{USER}/"
-SITE = f"https://{USER}.github.io/"
+SITE = "https://rewantth.dev/"
 HIDE_REPOS = {"notes", "rewantth", "rewantth.github.io"}   # public repos not shown in the stats
 
 # ============================== CONTENT (edit here) ==============================

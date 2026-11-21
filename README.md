@@ -5,9 +5,9 @@
 </div>
 
 <a name="home"></a>
-<a href="https://rewantth.github.io/"><img src="assets/home.svg" alt="Kali terminal running neofetch. Click to open the interactive terminal." width="100%"></a>
+<a href="https://rewantth.dev/"><img src="assets/home.svg" alt="Kali terminal running neofetch. Click to open the interactive terminal." width="100%"></a>
 
-<div align="center"><b><a href="https://rewantth.github.io/">▶ open the interactive terminal</a></b> &nbsp;·&nbsp; type <code>help</code> there to run commands</div>
+<div align="center"><b><a href="https://rewantth.dev/">▶ open the interactive terminal</a></b> &nbsp;·&nbsp; type <code>help</code> there to run commands</div>
 
 <a name="about"></a>
 <img src="assets/about.svg" alt="Kali terminal showing the about page" width="100%">
@@ -201,7 +201,7 @@ mon  · · · · · · · · · · · · ·
 tue  · · · · · · · · · · ░ · ·
 wed  · · · · · · · · · · · · ·
 thu  · · · · · · · · · · · · ·
-fri  · · · · · · · · · · · · ▒
+fri  · · · · · · · · · · · · █
 sat  · · · · · · · · · · · ·  
 sun  · · · · · · · · · · · ·  
 ```
